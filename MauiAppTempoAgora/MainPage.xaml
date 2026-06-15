@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppTempoAgora.MainPage">
+    <StackLayout Padding="8">
+
+        <Grid ColumnDefinitions="*,Auto"
+              ColumnSpacing="8">
+            <Entry x:Name="txt_cidade"
+                   Placeholder="Qual cidade?"
+                   Grid.Column="0"/>
+            <Button Text="Pesquisar"
+                    Clicked="ProcurarClicked"
+                    Grid.Column="1"/>
+        </Grid>
+
+        <Label x:Name="lbl_previsao"/>
+
+        <WebView x:Name="mv_mapa" 
+                 HeightRequest="580"/>
+
+    </StackLayout>
+    
+</ContentPage>
